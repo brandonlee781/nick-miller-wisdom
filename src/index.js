@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
   let quote = wisdom[Math.round(Math.random() * wisdom.length)];
-  res.json(quote)
+  res.json({quote: quote})
 })
 
 
 app.listen(port, () => {
-  console.log('Server listening on port 3000');
+  console.log('Server listening on port ' + port);
 })
