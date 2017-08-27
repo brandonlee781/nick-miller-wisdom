@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
   let quote = wisdom[Math.round(Math.random() * wisdom.length)];
-  res.send(quote)
+  res.json(quote)
 })
 
 
