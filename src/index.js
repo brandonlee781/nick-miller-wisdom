@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
-  let quote = wisdom[Math.round(Math.random() * wisdom.length)];
+  let quote = wisdom[Math.round(Math.random() * wisdom.length) - 1];
   res.json({quote: quote})
 })
 
